@@ -1,0 +1,35 @@
+{
+  "manifest_version": 3,
+  "name": "Google AI Studio TTS Automator",
+  "version": "1.0",
+  "description": "Bridge to automate speech generation in Google AI Studio from local Python scripts",
+  "permissions": [
+    "activeTab"
+  ],
+  "host_permissions": [
+    "https://aistudio.google.com/*",
+    "http://localhost:5000/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://aistudio.google.com/generate-speech",
+        "https://aistudio.google.com/u/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "inject.js"
+      ],
+      "matches": [
+        "https://aistudio.google.com/*"
+      ]
+    }
+  ]
+}
