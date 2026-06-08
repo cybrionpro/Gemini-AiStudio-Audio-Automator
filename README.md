@@ -1,4 +1,4 @@
-# Google AiStudi Audio Automator
+# Google AiStudio Audio Automator
 
 A lightweight bridge to automate high-quality speech generation directly from Google AI Studio. It acts as an intermediary server between your local Python backend/bot scripts and a custom Chrome Extension to automatically trigger, capture, and download high-quality, real-like AI TTS audio.
 
